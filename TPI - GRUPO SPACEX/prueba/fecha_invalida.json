@@ -1,0 +1,56 @@
+{
+    "version": "2.1",
+    "firma_digital": "yZxWvUtSrQpOnMlKjIhGfEdCbA9876543210",
+    "empresas": [
+      {
+        "nombre_empresa": "Innovatech Ltd.",
+        "fundacion": "2010-11-23",
+        "direccion": {
+          "calle": "Calle de la Innovación",
+          "ciudad": "Techville",
+          "pais": "España"
+        },
+        "ingresos_anuales": 750000.5,
+        "pyme": true,
+        "link": "https://www.proyectox.com",
+        "departamentos": [
+          {
+            "nombre": "Investigación",
+            "jefe": "Carlos Ruiz",
+  
+            "subdepartamentos": [
+              {
+                "nombre": "Inre",
+                "empleados": [
+                  {
+                    "nombre": "Hector",
+                    "edad": 35,
+                    "cargo": "PRODUCT ANALYST",
+                    "salario": 85.0,
+                    "activo": true,
+                    "fecha_contratacion": "8888-07-01"
+                  },
+                  {
+                    "nombre": "Luis",
+                    "edad": 29,
+                    "cargo": "UX DESIGNER",
+                    "salario": 45.0,
+                    "activo": false,
+                    "fecha_contratacion": "2019-09-15",
+                    "proyectos": [
+                      {
+                        "nombre": "Proyecto X",
+                        "estado": "IN PROGRESS",
+                        "fecha_inicio": "2024-05-01",
+                        "fecha_fin": "2025-04-30"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

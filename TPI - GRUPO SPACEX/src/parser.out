@@ -1,0 +1,2495 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    ERROR
+
+Grammar
+
+Rule 0     S' -> sigma
+Rule 1     sigma -> APERT_LISTA empresas COMA version COMA firmaDigital CIERRE_LISTA
+Rule 2     sigma -> APERT_LISTA empresas COMA firmaDigital COMA version CIERRE_LISTA
+Rule 3     sigma -> APERT_LISTA version COMA firmaDigital COMA empresas CIERRE_LISTA
+Rule 4     sigma -> APERT_LISTA firmaDigital COMA version COMA empresas CIERRE_LISTA
+Rule 5     sigma -> APERT_LISTA firmaDigital COMA empresas COMA version CIERRE_LISTA
+Rule 6     sigma -> APERT_LISTA empresas COMA version CIERRE_LISTA
+Rule 7     sigma -> APERT_LISTA empresas COMA firmaDigital CIERRE_LISTA
+Rule 8     sigma -> APERT_LISTA version COMA empresas CIERRE_LISTA
+Rule 9     sigma -> APERT_LISTA firmaDigital COMA empresas CIERRE_LISTA
+Rule 10    sigma -> APERT_LISTA empresas CIERRE_LISTA
+Rule 11    version -> VERSION TEXTO
+Rule 12    version -> VERSION VACIO
+Rule 13    firmaDigital -> FIRMA_DIGITAL TEXTO
+Rule 14    firmaDigital -> FIRMA_DIGITAL VACIO
+Rule 15    empresas -> EMPRESAS APERT_BLOQUE lista_empresas CIERRE_BLOQUE
+Rule 16    lista_empresas -> APERT_LISTA objeto_empresa CIERRE_LISTA
+Rule 17    lista_empresas -> APERT_LISTA objeto_empresa CIERRE_LISTA COMA lista_empresas
+Rule 18    objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales COMA pyme COMA link COMA departamentos
+Rule 19    objeto_empresa -> nombre_empresa COMA fundacion COMA ingresos_anuales COMA pyme COMA link COMA departamentos
+Rule 20    objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales COMA pyme COMA departamentos
+Rule 21    objeto_empresa -> nombre_empresa COMA fundacion COMA ingresos_anuales COMA pyme COMA departamentos
+Rule 22    nombre_empresa -> NOMBRE_EMPRESA TEXTO
+Rule 23    fundacion -> FUNDACION FECHA
+Rule 24    pyme -> PYME BOOLEANO
+Rule 25    ingresos_anuales -> INGRESOS_ANUALES FLOTANTE
+Rule 26    link -> LINK URL
+Rule 27    link -> LINK VACIO
+Rule 28    direccion -> DIRECCION APERT_LISTA objeto_direccion CIERRE_LISTA
+Rule 29    direccion -> DIRECCION VACIO
+Rule 30    objeto_direccion -> calle COMA ciudad COMA pais
+Rule 31    objeto_direccion -> calle COMA pais COMA ciudad
+Rule 32    objeto_direccion -> ciudad COMA pais COMA calle
+Rule 33    objeto_direccion -> ciudad COMA calle COMA pais
+Rule 34    objeto_direccion -> pais COMA ciudad COMA calle
+Rule 35    objeto_direccion -> pais COMA calle COMA ciudad
+Rule 36    calle -> CALLE TEXTO
+Rule 37    ciudad -> CIUDAD TEXTO
+Rule 38    pais -> PAIS TEXTO
+Rule 39    departamentos -> DEPARTAMENTOS APERT_BLOQUE lista_dpto CIERRE_BLOQUE
+Rule 40    lista_dpto -> APERT_LISTA objeto_dpto CIERRE_LISTA
+Rule 41    lista_dpto -> APERT_LISTA objeto_dpto CIERRE_LISTA COMA lista_dpto
+Rule 42    objeto_dpto -> nombre COMA jefe COMA sub_dptos
+Rule 43    objeto_dpto -> nombre COMA sub_dptos COMA jefe
+Rule 44    objeto_dpto -> jefe COMA sub_dptos COMA nombre
+Rule 45    objeto_dpto -> jefe COMA nombre COMA sub_dptos
+Rule 46    objeto_dpto -> sub_dptos COMA nombre COMA jefe
+Rule 47    objeto_dpto -> sub_dptos COMA jefe COMA nombre
+Rule 48    objeto_dpto -> nombre COMA sub_dptos
+Rule 49    objeto_dpto -> sub_dptos COMA nombre
+Rule 50    sub_dptos -> SUBDEPARTAMENTOS APERT_BLOQUE lista_sub_dpto CIERRE_BLOQUE
+Rule 51    lista_sub_dpto -> APERT_LISTA objeto_sub_dpto CIERRE_LISTA
+Rule 52    lista_sub_dpto -> APERT_LISTA objeto_sub_dpto CIERRE_LISTA COMA lista_sub_dpto
+Rule 53    objeto_sub_dpto -> nombre COMA jefe COMA empleados
+Rule 54    objeto_sub_dpto -> nombre COMA jefe
+Rule 55    objeto_sub_dpto -> nombre COMA empleados
+Rule 56    objeto_sub_dpto -> nombre
+Rule 57    objeto_sub_dpto -> jefe COMA nombre COMA empleados
+Rule 58    objeto_sub_dpto -> jefe COMA empleados COMA nombre
+Rule 59    objeto_sub_dpto -> empleados COMA jefe COMA nombre
+Rule 60    objeto_sub_dpto -> empleados COMA nombre COMA jefe
+Rule 61    objeto_sub_dpto -> jefe COMA nombre
+Rule 62    objeto_sub_dpto -> empleados COMA nombre
+Rule 63    empleados -> EMPLEADOS APERT_BLOQUE lista_empleados CIERRE_BLOQUE
+Rule 64    empleados -> EMPLEADOS VACIO
+Rule 65    lista_empleados -> APERT_LISTA objeto_empleados CIERRE_LISTA
+Rule 66    lista_empleados -> APERT_LISTA objeto_empleados CIERRE_LISTA COMA lista_empleados
+Rule 67    objeto_empleados -> nombre COMA edad COMA cargo COMA salario COMA activo COMA fecha_contratacion COMA proyectos
+Rule 68    objeto_empleados -> nombre COMA edad COMA cargo COMA salario COMA activo COMA fecha_contratacion
+Rule 69    objeto_empleados -> nombre COMA cargo COMA salario COMA activo COMA fecha_contratacion COMA proyectos
+Rule 70    objeto_empleados -> nombre COMA cargo COMA salario COMA activo COMA fecha_contratacion
+Rule 71    proyectos -> PROYECTOS APERT_BLOQUE lista_proyectos CIERRE_BLOQUE
+Rule 72    proyectos -> PROYECTOS VACIO
+Rule 73    lista_proyectos -> APERT_LISTA objeto_proyecto CIERRE_LISTA
+Rule 74    lista_proyectos -> APERT_LISTA objeto_proyecto CIERRE_LISTA COMA lista_proyectos
+Rule 75    objeto_proyecto -> nombre COMA estado COMA fecha_inicio COMA fecha_fin
+Rule 76    objeto_proyecto -> nombre COMA fecha_inicio COMA fecha_fin
+Rule 77    objeto_proyecto -> nombre COMA estado COMA fecha_inicio
+Rule 78    objeto_proyecto -> nombre COMA fecha_inicio
+Rule 79    nombre -> NOMBRE TEXTO
+Rule 80    jefe -> JEFE TEXTO
+Rule 81    jefe -> JEFE VACIO
+Rule 82    edad -> EDAD NUMERO
+Rule 83    edad -> EDAD VACIO
+Rule 84    cargo -> CARGO TEXTO_RESTRINGIDO_CARGO
+Rule 85    salario -> SALARIO FLOTANTE
+Rule 86    activo -> ACTIVO BOOLEANO
+Rule 87    fecha_contratacion -> FECHA_CONTRATACION FECHA
+Rule 88    estado -> ESTADO TEXTO_RESTRINGIDO_ESTADO
+Rule 89    estado -> ESTADO VACIO
+Rule 90    fecha_inicio -> FECHA_INICIO FECHA
+Rule 91    fecha_fin -> FECHA_FIN FECHA
+Rule 92    fecha_fin -> FECHA_FIN VACIO
+
+Terminals, with rules where they appear
+
+ACTIVO               : 86
+APERT_BLOQUE         : 15 39 50 63 71
+APERT_LISTA          : 1 2 3 4 5 6 7 8 9 10 16 17 28 40 41 51 52 65 66 73 74
+BOOLEANO             : 24 86
+CALLE                : 36
+CARGO                : 84
+CIERRE_BLOQUE        : 15 39 50 63 71
+CIERRE_LISTA         : 1 2 3 4 5 6 7 8 9 10 16 17 28 40 41 51 52 65 66 73 74
+CIUDAD               : 37
+COMA                 : 1 1 2 2 3 3 4 4 5 5 6 7 8 9 17 18 18 18 18 18 18 19 19 19 19 19 20 20 20 20 20 21 21 21 21 30 30 31 31 32 32 33 33 34 34 35 35 41 42 42 43 43 44 44 45 45 46 46 47 47 48 49 52 53 53 54 55 57 57 58 58 59 59 60 60 61 62 66 67 67 67 67 67 67 68 68 68 68 68 69 69 69 69 69 70 70 70 70 74 75 75 75 76 76 77 77 78
+DEPARTAMENTOS        : 39
+DIRECCION            : 28 29
+EDAD                 : 82 83
+EMPLEADOS            : 63 64
+EMPRESAS             : 15
+ERROR                : 
+ESTADO               : 88 89
+FECHA                : 23 87 90 91
+FECHA_CONTRATACION   : 87
+FECHA_FIN            : 91 92
+FECHA_INICIO         : 90
+FIRMA_DIGITAL        : 13 14
+FLOTANTE             : 25 85
+FUNDACION            : 23
+INGRESOS_ANUALES     : 25
+JEFE                 : 80 81
+LINK                 : 26 27
+NOMBRE               : 79
+NOMBRE_EMPRESA       : 22
+NUMERO               : 82
+PAIS                 : 38
+PROYECTOS            : 71 72
+PYME                 : 24
+SALARIO              : 85
+SUBDEPARTAMENTOS     : 50
+TEXTO                : 11 13 22 36 37 38 79 80
+TEXTO_RESTRINGIDO_CARGO : 84
+TEXTO_RESTRINGIDO_ESTADO : 88
+URL                  : 26
+VACIO                : 12 14 27 29 64 72 81 83 89 92
+VERSION              : 11 12
+error                : 
+
+Nonterminals, with rules where they appear
+
+activo               : 67 68 69 70
+calle                : 30 31 32 33 34 35
+cargo                : 67 68 69 70
+ciudad               : 30 31 32 33 34 35
+departamentos        : 18 19 20 21
+direccion            : 18 20
+edad                 : 67 68
+empleados            : 53 55 57 58 59 60 62
+empresas             : 1 2 3 4 5 6 7 8 9 10
+estado               : 75 77
+fecha_contratacion   : 67 68 69 70
+fecha_fin            : 75 76
+fecha_inicio         : 75 76 77 78
+firmaDigital         : 1 2 3 4 5 7 9
+fundacion            : 18 19 20 21
+ingresos_anuales     : 18 19 20 21
+jefe                 : 42 43 44 45 46 47 53 54 57 58 59 60 61
+link                 : 18 19
+lista_dpto           : 39 41
+lista_empleados      : 63 66
+lista_empresas       : 15 17
+lista_proyectos      : 71 74
+lista_sub_dpto       : 50 52
+nombre               : 42 43 44 45 46 47 48 49 53 54 55 56 57 58 59 60 61 62 67 68 69 70 75 76 77 78
+nombre_empresa       : 18 19 20 21
+objeto_direccion     : 28
+objeto_dpto          : 40 41
+objeto_empleados     : 65 66
+objeto_empresa       : 16 17
+objeto_proyecto      : 73 74
+objeto_sub_dpto      : 51 52
+pais                 : 30 31 32 33 34 35
+proyectos            : 67 69
+pyme                 : 18 19 20 21
+salario              : 67 68 69 70
+sigma                : 0
+sub_dptos            : 42 43 44 45 46 47 48 49
+version              : 1 2 3 4 5 6 8
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . sigma
+    (1) sigma -> . APERT_LISTA empresas COMA version COMA firmaDigital CIERRE_LISTA
+    (2) sigma -> . APERT_LISTA empresas COMA firmaDigital COMA version CIERRE_LISTA
+    (3) sigma -> . APERT_LISTA version COMA firmaDigital COMA empresas CIERRE_LISTA
+    (4) sigma -> . APERT_LISTA firmaDigital COMA version COMA empresas CIERRE_LISTA
+    (5) sigma -> . APERT_LISTA firmaDigital COMA empresas COMA version CIERRE_LISTA
+    (6) sigma -> . APERT_LISTA empresas COMA version CIERRE_LISTA
+    (7) sigma -> . APERT_LISTA empresas COMA firmaDigital CIERRE_LISTA
+    (8) sigma -> . APERT_LISTA version COMA empresas CIERRE_LISTA
+    (9) sigma -> . APERT_LISTA firmaDigital COMA empresas CIERRE_LISTA
+    (10) sigma -> . APERT_LISTA empresas CIERRE_LISTA
+
+    APERT_LISTA     shift and go to state 2
+
+    sigma                          shift and go to state 1
+
+state 1
+
+    (0) S' -> sigma .
+
+
+
+state 2
+
+    (1) sigma -> APERT_LISTA . empresas COMA version COMA firmaDigital CIERRE_LISTA
+    (2) sigma -> APERT_LISTA . empresas COMA firmaDigital COMA version CIERRE_LISTA
+    (3) sigma -> APERT_LISTA . version COMA firmaDigital COMA empresas CIERRE_LISTA
+    (4) sigma -> APERT_LISTA . firmaDigital COMA version COMA empresas CIERRE_LISTA
+    (5) sigma -> APERT_LISTA . firmaDigital COMA empresas COMA version CIERRE_LISTA
+    (6) sigma -> APERT_LISTA . empresas COMA version CIERRE_LISTA
+    (7) sigma -> APERT_LISTA . empresas COMA firmaDigital CIERRE_LISTA
+    (8) sigma -> APERT_LISTA . version COMA empresas CIERRE_LISTA
+    (9) sigma -> APERT_LISTA . firmaDigital COMA empresas CIERRE_LISTA
+    (10) sigma -> APERT_LISTA . empresas CIERRE_LISTA
+    (15) empresas -> . EMPRESAS APERT_BLOQUE lista_empresas CIERRE_BLOQUE
+    (11) version -> . VERSION TEXTO
+    (12) version -> . VERSION VACIO
+    (13) firmaDigital -> . FIRMA_DIGITAL TEXTO
+    (14) firmaDigital -> . FIRMA_DIGITAL VACIO
+
+    EMPRESAS        shift and go to state 6
+    VERSION         shift and go to state 7
+    FIRMA_DIGITAL   shift and go to state 8
+
+    empresas                       shift and go to state 3
+    version                        shift and go to state 4
+    firmaDigital                   shift and go to state 5
+
+state 3
+
+    (1) sigma -> APERT_LISTA empresas . COMA version COMA firmaDigital CIERRE_LISTA
+    (2) sigma -> APERT_LISTA empresas . COMA firmaDigital COMA version CIERRE_LISTA
+    (6) sigma -> APERT_LISTA empresas . COMA version CIERRE_LISTA
+    (7) sigma -> APERT_LISTA empresas . COMA firmaDigital CIERRE_LISTA
+    (10) sigma -> APERT_LISTA empresas . CIERRE_LISTA
+
+    COMA            shift and go to state 9
+    CIERRE_LISTA    shift and go to state 10
+
+
+state 4
+
+    (3) sigma -> APERT_LISTA version . COMA firmaDigital COMA empresas CIERRE_LISTA
+    (8) sigma -> APERT_LISTA version . COMA empresas CIERRE_LISTA
+
+    COMA            shift and go to state 11
+
+
+state 5
+
+    (4) sigma -> APERT_LISTA firmaDigital . COMA version COMA empresas CIERRE_LISTA
+    (5) sigma -> APERT_LISTA firmaDigital . COMA empresas COMA version CIERRE_LISTA
+    (9) sigma -> APERT_LISTA firmaDigital . COMA empresas CIERRE_LISTA
+
+    COMA            shift and go to state 12
+
+
+state 6
+
+    (15) empresas -> EMPRESAS . APERT_BLOQUE lista_empresas CIERRE_BLOQUE
+
+    APERT_BLOQUE    shift and go to state 13
+
+
+state 7
+
+    (11) version -> VERSION . TEXTO
+    (12) version -> VERSION . VACIO
+
+    TEXTO           shift and go to state 14
+    VACIO           shift and go to state 15
+
+
+state 8
+
+    (13) firmaDigital -> FIRMA_DIGITAL . TEXTO
+    (14) firmaDigital -> FIRMA_DIGITAL . VACIO
+
+    TEXTO           shift and go to state 16
+    VACIO           shift and go to state 17
+
+
+state 9
+
+    (1) sigma -> APERT_LISTA empresas COMA . version COMA firmaDigital CIERRE_LISTA
+    (2) sigma -> APERT_LISTA empresas COMA . firmaDigital COMA version CIERRE_LISTA
+    (6) sigma -> APERT_LISTA empresas COMA . version CIERRE_LISTA
+    (7) sigma -> APERT_LISTA empresas COMA . firmaDigital CIERRE_LISTA
+    (11) version -> . VERSION TEXTO
+    (12) version -> . VERSION VACIO
+    (13) firmaDigital -> . FIRMA_DIGITAL TEXTO
+    (14) firmaDigital -> . FIRMA_DIGITAL VACIO
+
+    VERSION         shift and go to state 7
+    FIRMA_DIGITAL   shift and go to state 8
+
+    version                        shift and go to state 18
+    firmaDigital                   shift and go to state 19
+
+state 10
+
+    (10) sigma -> APERT_LISTA empresas CIERRE_LISTA .
+
+    $end            reduce using rule 10 (sigma -> APERT_LISTA empresas CIERRE_LISTA .)
+
+
+state 11
+
+    (3) sigma -> APERT_LISTA version COMA . firmaDigital COMA empresas CIERRE_LISTA
+    (8) sigma -> APERT_LISTA version COMA . empresas CIERRE_LISTA
+    (13) firmaDigital -> . FIRMA_DIGITAL TEXTO
+    (14) firmaDigital -> . FIRMA_DIGITAL VACIO
+    (15) empresas -> . EMPRESAS APERT_BLOQUE lista_empresas CIERRE_BLOQUE
+
+    FIRMA_DIGITAL   shift and go to state 8
+    EMPRESAS        shift and go to state 6
+
+    firmaDigital                   shift and go to state 20
+    empresas                       shift and go to state 21
+
+state 12
+
+    (4) sigma -> APERT_LISTA firmaDigital COMA . version COMA empresas CIERRE_LISTA
+    (5) sigma -> APERT_LISTA firmaDigital COMA . empresas COMA version CIERRE_LISTA
+    (9) sigma -> APERT_LISTA firmaDigital COMA . empresas CIERRE_LISTA
+    (11) version -> . VERSION TEXTO
+    (12) version -> . VERSION VACIO
+    (15) empresas -> . EMPRESAS APERT_BLOQUE lista_empresas CIERRE_BLOQUE
+
+    VERSION         shift and go to state 7
+    EMPRESAS        shift and go to state 6
+
+    version                        shift and go to state 22
+    empresas                       shift and go to state 23
+
+state 13
+
+    (15) empresas -> EMPRESAS APERT_BLOQUE . lista_empresas CIERRE_BLOQUE
+    (16) lista_empresas -> . APERT_LISTA objeto_empresa CIERRE_LISTA
+    (17) lista_empresas -> . APERT_LISTA objeto_empresa CIERRE_LISTA COMA lista_empresas
+
+    APERT_LISTA     shift and go to state 25
+
+    lista_empresas                 shift and go to state 24
+
+state 14
+
+    (11) version -> VERSION TEXTO .
+
+    COMA            reduce using rule 11 (version -> VERSION TEXTO .)
+    CIERRE_LISTA    reduce using rule 11 (version -> VERSION TEXTO .)
+
+
+state 15
+
+    (12) version -> VERSION VACIO .
+
+    COMA            reduce using rule 12 (version -> VERSION VACIO .)
+    CIERRE_LISTA    reduce using rule 12 (version -> VERSION VACIO .)
+
+
+state 16
+
+    (13) firmaDigital -> FIRMA_DIGITAL TEXTO .
+
+    COMA            reduce using rule 13 (firmaDigital -> FIRMA_DIGITAL TEXTO .)
+    CIERRE_LISTA    reduce using rule 13 (firmaDigital -> FIRMA_DIGITAL TEXTO .)
+
+
+state 17
+
+    (14) firmaDigital -> FIRMA_DIGITAL VACIO .
+
+    COMA            reduce using rule 14 (firmaDigital -> FIRMA_DIGITAL VACIO .)
+    CIERRE_LISTA    reduce using rule 14 (firmaDigital -> FIRMA_DIGITAL VACIO .)
+
+
+state 18
+
+    (1) sigma -> APERT_LISTA empresas COMA version . COMA firmaDigital CIERRE_LISTA
+    (6) sigma -> APERT_LISTA empresas COMA version . CIERRE_LISTA
+
+    COMA            shift and go to state 26
+    CIERRE_LISTA    shift and go to state 27
+
+
+state 19
+
+    (2) sigma -> APERT_LISTA empresas COMA firmaDigital . COMA version CIERRE_LISTA
+    (7) sigma -> APERT_LISTA empresas COMA firmaDigital . CIERRE_LISTA
+
+    COMA            shift and go to state 28
+    CIERRE_LISTA    shift and go to state 29
+
+
+state 20
+
+    (3) sigma -> APERT_LISTA version COMA firmaDigital . COMA empresas CIERRE_LISTA
+
+    COMA            shift and go to state 30
+
+
+state 21
+
+    (8) sigma -> APERT_LISTA version COMA empresas . CIERRE_LISTA
+
+    CIERRE_LISTA    shift and go to state 31
+
+
+state 22
+
+    (4) sigma -> APERT_LISTA firmaDigital COMA version . COMA empresas CIERRE_LISTA
+
+    COMA            shift and go to state 32
+
+
+state 23
+
+    (5) sigma -> APERT_LISTA firmaDigital COMA empresas . COMA version CIERRE_LISTA
+    (9) sigma -> APERT_LISTA firmaDigital COMA empresas . CIERRE_LISTA
+
+    COMA            shift and go to state 33
+    CIERRE_LISTA    shift and go to state 34
+
+
+state 24
+
+    (15) empresas -> EMPRESAS APERT_BLOQUE lista_empresas . CIERRE_BLOQUE
+
+    CIERRE_BLOQUE   shift and go to state 35
+
+
+state 25
+
+    (16) lista_empresas -> APERT_LISTA . objeto_empresa CIERRE_LISTA
+    (17) lista_empresas -> APERT_LISTA . objeto_empresa CIERRE_LISTA COMA lista_empresas
+    (18) objeto_empresa -> . nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales COMA pyme COMA link COMA departamentos
+    (19) objeto_empresa -> . nombre_empresa COMA fundacion COMA ingresos_anuales COMA pyme COMA link COMA departamentos
+    (20) objeto_empresa -> . nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales COMA pyme COMA departamentos
+    (21) objeto_empresa -> . nombre_empresa COMA fundacion COMA ingresos_anuales COMA pyme COMA departamentos
+    (22) nombre_empresa -> . NOMBRE_EMPRESA TEXTO
+
+    NOMBRE_EMPRESA  shift and go to state 38
+
+    objeto_empresa                 shift and go to state 36
+    nombre_empresa                 shift and go to state 37
+
+state 26
+
+    (1) sigma -> APERT_LISTA empresas COMA version COMA . firmaDigital CIERRE_LISTA
+    (13) firmaDigital -> . FIRMA_DIGITAL TEXTO
+    (14) firmaDigital -> . FIRMA_DIGITAL VACIO
+
+    FIRMA_DIGITAL   shift and go to state 8
+
+    firmaDigital                   shift and go to state 39
+
+state 27
+
+    (6) sigma -> APERT_LISTA empresas COMA version CIERRE_LISTA .
+
+    $end            reduce using rule 6 (sigma -> APERT_LISTA empresas COMA version CIERRE_LISTA .)
+
+
+state 28
+
+    (2) sigma -> APERT_LISTA empresas COMA firmaDigital COMA . version CIERRE_LISTA
+    (11) version -> . VERSION TEXTO
+    (12) version -> . VERSION VACIO
+
+    VERSION         shift and go to state 7
+
+    version                        shift and go to state 40
+
+state 29
+
+    (7) sigma -> APERT_LISTA empresas COMA firmaDigital CIERRE_LISTA .
+
+    $end            reduce using rule 7 (sigma -> APERT_LISTA empresas COMA firmaDigital CIERRE_LISTA .)
+
+
+state 30
+
+    (3) sigma -> APERT_LISTA version COMA firmaDigital COMA . empresas CIERRE_LISTA
+    (15) empresas -> . EMPRESAS APERT_BLOQUE lista_empresas CIERRE_BLOQUE
+
+    EMPRESAS        shift and go to state 6
+
+    empresas                       shift and go to state 41
+
+state 31
+
+    (8) sigma -> APERT_LISTA version COMA empresas CIERRE_LISTA .
+
+    $end            reduce using rule 8 (sigma -> APERT_LISTA version COMA empresas CIERRE_LISTA .)
+
+
+state 32
+
+    (4) sigma -> APERT_LISTA firmaDigital COMA version COMA . empresas CIERRE_LISTA
+    (15) empresas -> . EMPRESAS APERT_BLOQUE lista_empresas CIERRE_BLOQUE
+
+    EMPRESAS        shift and go to state 6
+
+    empresas                       shift and go to state 42
+
+state 33
+
+    (5) sigma -> APERT_LISTA firmaDigital COMA empresas COMA . version CIERRE_LISTA
+    (11) version -> . VERSION TEXTO
+    (12) version -> . VERSION VACIO
+
+    VERSION         shift and go to state 7
+
+    version                        shift and go to state 43
+
+state 34
+
+    (9) sigma -> APERT_LISTA firmaDigital COMA empresas CIERRE_LISTA .
+
+    $end            reduce using rule 9 (sigma -> APERT_LISTA firmaDigital COMA empresas CIERRE_LISTA .)
+
+
+state 35
+
+    (15) empresas -> EMPRESAS APERT_BLOQUE lista_empresas CIERRE_BLOQUE .
+
+    COMA            reduce using rule 15 (empresas -> EMPRESAS APERT_BLOQUE lista_empresas CIERRE_BLOQUE .)
+    CIERRE_LISTA    reduce using rule 15 (empresas -> EMPRESAS APERT_BLOQUE lista_empresas CIERRE_BLOQUE .)
+
+
+state 36
+
+    (16) lista_empresas -> APERT_LISTA objeto_empresa . CIERRE_LISTA
+    (17) lista_empresas -> APERT_LISTA objeto_empresa . CIERRE_LISTA COMA lista_empresas
+
+    CIERRE_LISTA    shift and go to state 44
+
+
+state 37
+
+    (18) objeto_empresa -> nombre_empresa . COMA fundacion COMA direccion COMA ingresos_anuales COMA pyme COMA link COMA departamentos
+    (19) objeto_empresa -> nombre_empresa . COMA fundacion COMA ingresos_anuales COMA pyme COMA link COMA departamentos
+    (20) objeto_empresa -> nombre_empresa . COMA fundacion COMA direccion COMA ingresos_anuales COMA pyme COMA departamentos
+    (21) objeto_empresa -> nombre_empresa . COMA fundacion COMA ingresos_anuales COMA pyme COMA departamentos
+
+    COMA            shift and go to state 45
+
+
+state 38
+
+    (22) nombre_empresa -> NOMBRE_EMPRESA . TEXTO
+
+    TEXTO           shift and go to state 46
+
+
+state 39
+
+    (1) sigma -> APERT_LISTA empresas COMA version COMA firmaDigital . CIERRE_LISTA
+
+    CIERRE_LISTA    shift and go to state 47
+
+
+state 40
+
+    (2) sigma -> APERT_LISTA empresas COMA firmaDigital COMA version . CIERRE_LISTA
+
+    CIERRE_LISTA    shift and go to state 48
+
+
+state 41
+
+    (3) sigma -> APERT_LISTA version COMA firmaDigital COMA empresas . CIERRE_LISTA
+
+    CIERRE_LISTA    shift and go to state 49
+
+
+state 42
+
+    (4) sigma -> APERT_LISTA firmaDigital COMA version COMA empresas . CIERRE_LISTA
+
+    CIERRE_LISTA    shift and go to state 50
+
+
+state 43
+
+    (5) sigma -> APERT_LISTA firmaDigital COMA empresas COMA version . CIERRE_LISTA
+
+    CIERRE_LISTA    shift and go to state 51
+
+
+state 44
+
+    (16) lista_empresas -> APERT_LISTA objeto_empresa CIERRE_LISTA .
+    (17) lista_empresas -> APERT_LISTA objeto_empresa CIERRE_LISTA . COMA lista_empresas
+
+    CIERRE_BLOQUE   reduce using rule 16 (lista_empresas -> APERT_LISTA objeto_empresa CIERRE_LISTA .)
+    COMA            shift and go to state 52
+
+
+state 45
+
+    (18) objeto_empresa -> nombre_empresa COMA . fundacion COMA direccion COMA ingresos_anuales COMA pyme COMA link COMA departamentos
+    (19) objeto_empresa -> nombre_empresa COMA . fundacion COMA ingresos_anuales COMA pyme COMA link COMA departamentos
+    (20) objeto_empresa -> nombre_empresa COMA . fundacion COMA direccion COMA ingresos_anuales COMA pyme COMA departamentos
+    (21) objeto_empresa -> nombre_empresa COMA . fundacion COMA ingresos_anuales COMA pyme COMA departamentos
+    (23) fundacion -> . FUNDACION FECHA
+
+    FUNDACION       shift and go to state 54
+
+    fundacion                      shift and go to state 53
+
+state 46
+
+    (22) nombre_empresa -> NOMBRE_EMPRESA TEXTO .
+
+    COMA            reduce using rule 22 (nombre_empresa -> NOMBRE_EMPRESA TEXTO .)
+
+
+state 47
+
+    (1) sigma -> APERT_LISTA empresas COMA version COMA firmaDigital CIERRE_LISTA .
+
+    $end            reduce using rule 1 (sigma -> APERT_LISTA empresas COMA version COMA firmaDigital CIERRE_LISTA .)
+
+
+state 48
+
+    (2) sigma -> APERT_LISTA empresas COMA firmaDigital COMA version CIERRE_LISTA .
+
+    $end            reduce using rule 2 (sigma -> APERT_LISTA empresas COMA firmaDigital COMA version CIERRE_LISTA .)
+
+
+state 49
+
+    (3) sigma -> APERT_LISTA version COMA firmaDigital COMA empresas CIERRE_LISTA .
+
+    $end            reduce using rule 3 (sigma -> APERT_LISTA version COMA firmaDigital COMA empresas CIERRE_LISTA .)
+
+
+state 50
+
+    (4) sigma -> APERT_LISTA firmaDigital COMA version COMA empresas CIERRE_LISTA .
+
+    $end            reduce using rule 4 (sigma -> APERT_LISTA firmaDigital COMA version COMA empresas CIERRE_LISTA .)
+
+
+state 51
+
+    (5) sigma -> APERT_LISTA firmaDigital COMA empresas COMA version CIERRE_LISTA .
+
+    $end            reduce using rule 5 (sigma -> APERT_LISTA firmaDigital COMA empresas COMA version CIERRE_LISTA .)
+
+
+state 52
+
+    (17) lista_empresas -> APERT_LISTA objeto_empresa CIERRE_LISTA COMA . lista_empresas
+    (16) lista_empresas -> . APERT_LISTA objeto_empresa CIERRE_LISTA
+    (17) lista_empresas -> . APERT_LISTA objeto_empresa CIERRE_LISTA COMA lista_empresas
+
+    APERT_LISTA     shift and go to state 25
+
+    lista_empresas                 shift and go to state 55
+
+state 53
+
+    (18) objeto_empresa -> nombre_empresa COMA fundacion . COMA direccion COMA ingresos_anuales COMA pyme COMA link COMA departamentos
+    (19) objeto_empresa -> nombre_empresa COMA fundacion . COMA ingresos_anuales COMA pyme COMA link COMA departamentos
+    (20) objeto_empresa -> nombre_empresa COMA fundacion . COMA direccion COMA ingresos_anuales COMA pyme COMA departamentos
+    (21) objeto_empresa -> nombre_empresa COMA fundacion . COMA ingresos_anuales COMA pyme COMA departamentos
+
+    COMA            shift and go to state 56
+
+
+state 54
+
+    (23) fundacion -> FUNDACION . FECHA
+
+    FECHA           shift and go to state 57
+
+
+state 55
+
+    (17) lista_empresas -> APERT_LISTA objeto_empresa CIERRE_LISTA COMA lista_empresas .
+
+    CIERRE_BLOQUE   reduce using rule 17 (lista_empresas -> APERT_LISTA objeto_empresa CIERRE_LISTA COMA lista_empresas .)
+
+
+state 56
+
+    (18) objeto_empresa -> nombre_empresa COMA fundacion COMA . direccion COMA ingresos_anuales COMA pyme COMA link COMA departamentos
+    (19) objeto_empresa -> nombre_empresa COMA fundacion COMA . ingresos_anuales COMA pyme COMA link COMA departamentos
+    (20) objeto_empresa -> nombre_empresa COMA fundacion COMA . direccion COMA ingresos_anuales COMA pyme COMA departamentos
+    (21) objeto_empresa -> nombre_empresa COMA fundacion COMA . ingresos_anuales COMA pyme COMA departamentos
+    (28) direccion -> . DIRECCION APERT_LISTA objeto_direccion CIERRE_LISTA
+    (29) direccion -> . DIRECCION VACIO
+    (25) ingresos_anuales -> . INGRESOS_ANUALES FLOTANTE
+
+    DIRECCION       shift and go to state 60
+    INGRESOS_ANUALES shift and go to state 61
+
+    direccion                      shift and go to state 58
+    ingresos_anuales               shift and go to state 59
+
+state 57
+
+    (23) fundacion -> FUNDACION FECHA .
+
+    COMA            reduce using rule 23 (fundacion -> FUNDACION FECHA .)
+
+
+state 58
+
+    (18) objeto_empresa -> nombre_empresa COMA fundacion COMA direccion . COMA ingresos_anuales COMA pyme COMA link COMA departamentos
+    (20) objeto_empresa -> nombre_empresa COMA fundacion COMA direccion . COMA ingresos_anuales COMA pyme COMA departamentos
+
+    COMA            shift and go to state 62
+
+
+state 59
+
+    (19) objeto_empresa -> nombre_empresa COMA fundacion COMA ingresos_anuales . COMA pyme COMA link COMA departamentos
+    (21) objeto_empresa -> nombre_empresa COMA fundacion COMA ingresos_anuales . COMA pyme COMA departamentos
+
+    COMA            shift and go to state 63
+
+
+state 60
+
+    (28) direccion -> DIRECCION . APERT_LISTA objeto_direccion CIERRE_LISTA
+    (29) direccion -> DIRECCION . VACIO
+
+    APERT_LISTA     shift and go to state 64
+    VACIO           shift and go to state 65
+
+
+state 61
+
+    (25) ingresos_anuales -> INGRESOS_ANUALES . FLOTANTE
+
+    FLOTANTE        shift and go to state 66
+
+
+state 62
+
+    (18) objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA . ingresos_anuales COMA pyme COMA link COMA departamentos
+    (20) objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA . ingresos_anuales COMA pyme COMA departamentos
+    (25) ingresos_anuales -> . INGRESOS_ANUALES FLOTANTE
+
+    INGRESOS_ANUALES shift and go to state 61
+
+    ingresos_anuales               shift and go to state 67
+
+state 63
+
+    (19) objeto_empresa -> nombre_empresa COMA fundacion COMA ingresos_anuales COMA . pyme COMA link COMA departamentos
+    (21) objeto_empresa -> nombre_empresa COMA fundacion COMA ingresos_anuales COMA . pyme COMA departamentos
+    (24) pyme -> . PYME BOOLEANO
+
+    PYME            shift and go to state 69
+
+    pyme                           shift and go to state 68
+
+state 64
+
+    (28) direccion -> DIRECCION APERT_LISTA . objeto_direccion CIERRE_LISTA
+    (30) objeto_direccion -> . calle COMA ciudad COMA pais
+    (31) objeto_direccion -> . calle COMA pais COMA ciudad
+    (32) objeto_direccion -> . ciudad COMA pais COMA calle
+    (33) objeto_direccion -> . ciudad COMA calle COMA pais
+    (34) objeto_direccion -> . pais COMA ciudad COMA calle
+    (35) objeto_direccion -> . pais COMA calle COMA ciudad
+    (36) calle -> . CALLE TEXTO
+    (37) ciudad -> . CIUDAD TEXTO
+    (38) pais -> . PAIS TEXTO
+
+    CALLE           shift and go to state 74
+    CIUDAD          shift and go to state 75
+    PAIS            shift and go to state 76
+
+    objeto_direccion               shift and go to state 70
+    calle                          shift and go to state 71
+    ciudad                         shift and go to state 72
+    pais                           shift and go to state 73
+
+state 65
+
+    (29) direccion -> DIRECCION VACIO .
+
+    COMA            reduce using rule 29 (direccion -> DIRECCION VACIO .)
+
+
+state 66
+
+    (25) ingresos_anuales -> INGRESOS_ANUALES FLOTANTE .
+
+    COMA            reduce using rule 25 (ingresos_anuales -> INGRESOS_ANUALES FLOTANTE .)
+
+
+state 67
+
+    (18) objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales . COMA pyme COMA link COMA departamentos
+    (20) objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales . COMA pyme COMA departamentos
+
+    COMA            shift and go to state 77
+
+
+state 68
+
+    (19) objeto_empresa -> nombre_empresa COMA fundacion COMA ingresos_anuales COMA pyme . COMA link COMA departamentos
+    (21) objeto_empresa -> nombre_empresa COMA fundacion COMA ingresos_anuales COMA pyme . COMA departamentos
+
+    COMA            shift and go to state 78
+
+
+state 69
+
+    (24) pyme -> PYME . BOOLEANO
+
+    BOOLEANO        shift and go to state 79
+
+
+state 70
+
+    (28) direccion -> DIRECCION APERT_LISTA objeto_direccion . CIERRE_LISTA
+
+    CIERRE_LISTA    shift and go to state 80
+
+
+state 71
+
+    (30) objeto_direccion -> calle . COMA ciudad COMA pais
+    (31) objeto_direccion -> calle . COMA pais COMA ciudad
+
+    COMA            shift and go to state 81
+
+
+state 72
+
+    (32) objeto_direccion -> ciudad . COMA pais COMA calle
+    (33) objeto_direccion -> ciudad . COMA calle COMA pais
+
+    COMA            shift and go to state 82
+
+
+state 73
+
+    (34) objeto_direccion -> pais . COMA ciudad COMA calle
+    (35) objeto_direccion -> pais . COMA calle COMA ciudad
+
+    COMA            shift and go to state 83
+
+
+state 74
+
+    (36) calle -> CALLE . TEXTO
+
+    TEXTO           shift and go to state 84
+
+
+state 75
+
+    (37) ciudad -> CIUDAD . TEXTO
+
+    TEXTO           shift and go to state 85
+
+
+state 76
+
+    (38) pais -> PAIS . TEXTO
+
+    TEXTO           shift and go to state 86
+
+
+state 77
+
+    (18) objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales COMA . pyme COMA link COMA departamentos
+    (20) objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales COMA . pyme COMA departamentos
+    (24) pyme -> . PYME BOOLEANO
+
+    PYME            shift and go to state 69
+
+    pyme                           shift and go to state 87
+
+state 78
+
+    (19) objeto_empresa -> nombre_empresa COMA fundacion COMA ingresos_anuales COMA pyme COMA . link COMA departamentos
+    (21) objeto_empresa -> nombre_empresa COMA fundacion COMA ingresos_anuales COMA pyme COMA . departamentos
+    (26) link -> . LINK URL
+    (27) link -> . LINK VACIO
+    (39) departamentos -> . DEPARTAMENTOS APERT_BLOQUE lista_dpto CIERRE_BLOQUE
+
+    LINK            shift and go to state 90
+    DEPARTAMENTOS   shift and go to state 91
+
+    link                           shift and go to state 88
+    departamentos                  shift and go to state 89
+
+state 79
+
+    (24) pyme -> PYME BOOLEANO .
+
+    COMA            reduce using rule 24 (pyme -> PYME BOOLEANO .)
+
+
+state 80
+
+    (28) direccion -> DIRECCION APERT_LISTA objeto_direccion CIERRE_LISTA .
+
+    COMA            reduce using rule 28 (direccion -> DIRECCION APERT_LISTA objeto_direccion CIERRE_LISTA .)
+
+
+state 81
+
+    (30) objeto_direccion -> calle COMA . ciudad COMA pais
+    (31) objeto_direccion -> calle COMA . pais COMA ciudad
+    (37) ciudad -> . CIUDAD TEXTO
+    (38) pais -> . PAIS TEXTO
+
+    CIUDAD          shift and go to state 75
+    PAIS            shift and go to state 76
+
+    ciudad                         shift and go to state 92
+    pais                           shift and go to state 93
+
+state 82
+
+    (32) objeto_direccion -> ciudad COMA . pais COMA calle
+    (33) objeto_direccion -> ciudad COMA . calle COMA pais
+    (38) pais -> . PAIS TEXTO
+    (36) calle -> . CALLE TEXTO
+
+    PAIS            shift and go to state 76
+    CALLE           shift and go to state 74
+
+    pais                           shift and go to state 94
+    calle                          shift and go to state 95
+
+state 83
+
+    (34) objeto_direccion -> pais COMA . ciudad COMA calle
+    (35) objeto_direccion -> pais COMA . calle COMA ciudad
+    (37) ciudad -> . CIUDAD TEXTO
+    (36) calle -> . CALLE TEXTO
+
+    CIUDAD          shift and go to state 75
+    CALLE           shift and go to state 74
+
+    ciudad                         shift and go to state 96
+    calle                          shift and go to state 97
+
+state 84
+
+    (36) calle -> CALLE TEXTO .
+
+    COMA            reduce using rule 36 (calle -> CALLE TEXTO .)
+    CIERRE_LISTA    reduce using rule 36 (calle -> CALLE TEXTO .)
+
+
+state 85
+
+    (37) ciudad -> CIUDAD TEXTO .
+
+    COMA            reduce using rule 37 (ciudad -> CIUDAD TEXTO .)
+    CIERRE_LISTA    reduce using rule 37 (ciudad -> CIUDAD TEXTO .)
+
+
+state 86
+
+    (38) pais -> PAIS TEXTO .
+
+    COMA            reduce using rule 38 (pais -> PAIS TEXTO .)
+    CIERRE_LISTA    reduce using rule 38 (pais -> PAIS TEXTO .)
+
+
+state 87
+
+    (18) objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales COMA pyme . COMA link COMA departamentos
+    (20) objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales COMA pyme . COMA departamentos
+
+    COMA            shift and go to state 98
+
+
+state 88
+
+    (19) objeto_empresa -> nombre_empresa COMA fundacion COMA ingresos_anuales COMA pyme COMA link . COMA departamentos
+
+    COMA            shift and go to state 99
+
+
+state 89
+
+    (21) objeto_empresa -> nombre_empresa COMA fundacion COMA ingresos_anuales COMA pyme COMA departamentos .
+
+    CIERRE_LISTA    reduce using rule 21 (objeto_empresa -> nombre_empresa COMA fundacion COMA ingresos_anuales COMA pyme COMA departamentos .)
+
+
+state 90
+
+    (26) link -> LINK . URL
+    (27) link -> LINK . VACIO
+
+    URL             shift and go to state 100
+    VACIO           shift and go to state 101
+
+
+state 91
+
+    (39) departamentos -> DEPARTAMENTOS . APERT_BLOQUE lista_dpto CIERRE_BLOQUE
+
+    APERT_BLOQUE    shift and go to state 102
+
+
+state 92
+
+    (30) objeto_direccion -> calle COMA ciudad . COMA pais
+
+    COMA            shift and go to state 103
+
+
+state 93
+
+    (31) objeto_direccion -> calle COMA pais . COMA ciudad
+
+    COMA            shift and go to state 104
+
+
+state 94
+
+    (32) objeto_direccion -> ciudad COMA pais . COMA calle
+
+    COMA            shift and go to state 105
+
+
+state 95
+
+    (33) objeto_direccion -> ciudad COMA calle . COMA pais
+
+    COMA            shift and go to state 106
+
+
+state 96
+
+    (34) objeto_direccion -> pais COMA ciudad . COMA calle
+
+    COMA            shift and go to state 107
+
+
+state 97
+
+    (35) objeto_direccion -> pais COMA calle . COMA ciudad
+
+    COMA            shift and go to state 108
+
+
+state 98
+
+    (18) objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales COMA pyme COMA . link COMA departamentos
+    (20) objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales COMA pyme COMA . departamentos
+    (26) link -> . LINK URL
+    (27) link -> . LINK VACIO
+    (39) departamentos -> . DEPARTAMENTOS APERT_BLOQUE lista_dpto CIERRE_BLOQUE
+
+    LINK            shift and go to state 90
+    DEPARTAMENTOS   shift and go to state 91
+
+    link                           shift and go to state 109
+    departamentos                  shift and go to state 110
+
+state 99
+
+    (19) objeto_empresa -> nombre_empresa COMA fundacion COMA ingresos_anuales COMA pyme COMA link COMA . departamentos
+    (39) departamentos -> . DEPARTAMENTOS APERT_BLOQUE lista_dpto CIERRE_BLOQUE
+
+    DEPARTAMENTOS   shift and go to state 91
+
+    departamentos                  shift and go to state 111
+
+state 100
+
+    (26) link -> LINK URL .
+
+    COMA            reduce using rule 26 (link -> LINK URL .)
+
+
+state 101
+
+    (27) link -> LINK VACIO .
+
+    COMA            reduce using rule 27 (link -> LINK VACIO .)
+
+
+state 102
+
+    (39) departamentos -> DEPARTAMENTOS APERT_BLOQUE . lista_dpto CIERRE_BLOQUE
+    (40) lista_dpto -> . APERT_LISTA objeto_dpto CIERRE_LISTA
+    (41) lista_dpto -> . APERT_LISTA objeto_dpto CIERRE_LISTA COMA lista_dpto
+
+    APERT_LISTA     shift and go to state 113
+
+    lista_dpto                     shift and go to state 112
+
+state 103
+
+    (30) objeto_direccion -> calle COMA ciudad COMA . pais
+    (38) pais -> . PAIS TEXTO
+
+    PAIS            shift and go to state 76
+
+    pais                           shift and go to state 114
+
+state 104
+
+    (31) objeto_direccion -> calle COMA pais COMA . ciudad
+    (37) ciudad -> . CIUDAD TEXTO
+
+    CIUDAD          shift and go to state 75
+
+    ciudad                         shift and go to state 115
+
+state 105
+
+    (32) objeto_direccion -> ciudad COMA pais COMA . calle
+    (36) calle -> . CALLE TEXTO
+
+    CALLE           shift and go to state 74
+
+    calle                          shift and go to state 116
+
+state 106
+
+    (33) objeto_direccion -> ciudad COMA calle COMA . pais
+    (38) pais -> . PAIS TEXTO
+
+    PAIS            shift and go to state 76
+
+    pais                           shift and go to state 117
+
+state 107
+
+    (34) objeto_direccion -> pais COMA ciudad COMA . calle
+    (36) calle -> . CALLE TEXTO
+
+    CALLE           shift and go to state 74
+
+    calle                          shift and go to state 118
+
+state 108
+
+    (35) objeto_direccion -> pais COMA calle COMA . ciudad
+    (37) ciudad -> . CIUDAD TEXTO
+
+    CIUDAD          shift and go to state 75
+
+    ciudad                         shift and go to state 119
+
+state 109
+
+    (18) objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales COMA pyme COMA link . COMA departamentos
+
+    COMA            shift and go to state 120
+
+
+state 110
+
+    (20) objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales COMA pyme COMA departamentos .
+
+    CIERRE_LISTA    reduce using rule 20 (objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales COMA pyme COMA departamentos .)
+
+
+state 111
+
+    (19) objeto_empresa -> nombre_empresa COMA fundacion COMA ingresos_anuales COMA pyme COMA link COMA departamentos .
+
+    CIERRE_LISTA    reduce using rule 19 (objeto_empresa -> nombre_empresa COMA fundacion COMA ingresos_anuales COMA pyme COMA link COMA departamentos .)
+
+
+state 112
+
+    (39) departamentos -> DEPARTAMENTOS APERT_BLOQUE lista_dpto . CIERRE_BLOQUE
+
+    CIERRE_BLOQUE   shift and go to state 121
+
+
+state 113
+
+    (40) lista_dpto -> APERT_LISTA . objeto_dpto CIERRE_LISTA
+    (41) lista_dpto -> APERT_LISTA . objeto_dpto CIERRE_LISTA COMA lista_dpto
+    (42) objeto_dpto -> . nombre COMA jefe COMA sub_dptos
+    (43) objeto_dpto -> . nombre COMA sub_dptos COMA jefe
+    (44) objeto_dpto -> . jefe COMA sub_dptos COMA nombre
+    (45) objeto_dpto -> . jefe COMA nombre COMA sub_dptos
+    (46) objeto_dpto -> . sub_dptos COMA nombre COMA jefe
+    (47) objeto_dpto -> . sub_dptos COMA jefe COMA nombre
+    (48) objeto_dpto -> . nombre COMA sub_dptos
+    (49) objeto_dpto -> . sub_dptos COMA nombre
+    (79) nombre -> . NOMBRE TEXTO
+    (80) jefe -> . JEFE TEXTO
+    (81) jefe -> . JEFE VACIO
+    (50) sub_dptos -> . SUBDEPARTAMENTOS APERT_BLOQUE lista_sub_dpto CIERRE_BLOQUE
+
+    NOMBRE          shift and go to state 126
+    JEFE            shift and go to state 127
+    SUBDEPARTAMENTOS shift and go to state 128
+
+    objeto_dpto                    shift and go to state 122
+    nombre                         shift and go to state 123
+    jefe                           shift and go to state 124
+    sub_dptos                      shift and go to state 125
+
+state 114
+
+    (30) objeto_direccion -> calle COMA ciudad COMA pais .
+
+    CIERRE_LISTA    reduce using rule 30 (objeto_direccion -> calle COMA ciudad COMA pais .)
+
+
+state 115
+
+    (31) objeto_direccion -> calle COMA pais COMA ciudad .
+
+    CIERRE_LISTA    reduce using rule 31 (objeto_direccion -> calle COMA pais COMA ciudad .)
+
+
+state 116
+
+    (32) objeto_direccion -> ciudad COMA pais COMA calle .
+
+    CIERRE_LISTA    reduce using rule 32 (objeto_direccion -> ciudad COMA pais COMA calle .)
+
+
+state 117
+
+    (33) objeto_direccion -> ciudad COMA calle COMA pais .
+
+    CIERRE_LISTA    reduce using rule 33 (objeto_direccion -> ciudad COMA calle COMA pais .)
+
+
+state 118
+
+    (34) objeto_direccion -> pais COMA ciudad COMA calle .
+
+    CIERRE_LISTA    reduce using rule 34 (objeto_direccion -> pais COMA ciudad COMA calle .)
+
+
+state 119
+
+    (35) objeto_direccion -> pais COMA calle COMA ciudad .
+
+    CIERRE_LISTA    reduce using rule 35 (objeto_direccion -> pais COMA calle COMA ciudad .)
+
+
+state 120
+
+    (18) objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales COMA pyme COMA link COMA . departamentos
+    (39) departamentos -> . DEPARTAMENTOS APERT_BLOQUE lista_dpto CIERRE_BLOQUE
+
+    DEPARTAMENTOS   shift and go to state 91
+
+    departamentos                  shift and go to state 129
+
+state 121
+
+    (39) departamentos -> DEPARTAMENTOS APERT_BLOQUE lista_dpto CIERRE_BLOQUE .
+
+    CIERRE_LISTA    reduce using rule 39 (departamentos -> DEPARTAMENTOS APERT_BLOQUE lista_dpto CIERRE_BLOQUE .)
+
+
+state 122
+
+    (40) lista_dpto -> APERT_LISTA objeto_dpto . CIERRE_LISTA
+    (41) lista_dpto -> APERT_LISTA objeto_dpto . CIERRE_LISTA COMA lista_dpto
+
+    CIERRE_LISTA    shift and go to state 130
+
+
+state 123
+
+    (42) objeto_dpto -> nombre . COMA jefe COMA sub_dptos
+    (43) objeto_dpto -> nombre . COMA sub_dptos COMA jefe
+    (48) objeto_dpto -> nombre . COMA sub_dptos
+
+    COMA            shift and go to state 131
+
+
+state 124
+
+    (44) objeto_dpto -> jefe . COMA sub_dptos COMA nombre
+    (45) objeto_dpto -> jefe . COMA nombre COMA sub_dptos
+
+    COMA            shift and go to state 132
+
+
+state 125
+
+    (46) objeto_dpto -> sub_dptos . COMA nombre COMA jefe
+    (47) objeto_dpto -> sub_dptos . COMA jefe COMA nombre
+    (49) objeto_dpto -> sub_dptos . COMA nombre
+
+    COMA            shift and go to state 133
+
+
+state 126
+
+    (79) nombre -> NOMBRE . TEXTO
+
+    TEXTO           shift and go to state 134
+
+
+state 127
+
+    (80) jefe -> JEFE . TEXTO
+    (81) jefe -> JEFE . VACIO
+
+    TEXTO           shift and go to state 135
+    VACIO           shift and go to state 136
+
+
+state 128
+
+    (50) sub_dptos -> SUBDEPARTAMENTOS . APERT_BLOQUE lista_sub_dpto CIERRE_BLOQUE
+
+    APERT_BLOQUE    shift and go to state 137
+
+
+state 129
+
+    (18) objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales COMA pyme COMA link COMA departamentos .
+
+    CIERRE_LISTA    reduce using rule 18 (objeto_empresa -> nombre_empresa COMA fundacion COMA direccion COMA ingresos_anuales COMA pyme COMA link COMA departamentos .)
+
+
+state 130
+
+    (40) lista_dpto -> APERT_LISTA objeto_dpto CIERRE_LISTA .
+    (41) lista_dpto -> APERT_LISTA objeto_dpto CIERRE_LISTA . COMA lista_dpto
+
+    CIERRE_BLOQUE   reduce using rule 40 (lista_dpto -> APERT_LISTA objeto_dpto CIERRE_LISTA .)
+    COMA            shift and go to state 138
+
+
+state 131
+
+    (42) objeto_dpto -> nombre COMA . jefe COMA sub_dptos
+    (43) objeto_dpto -> nombre COMA . sub_dptos COMA jefe
+    (48) objeto_dpto -> nombre COMA . sub_dptos
+    (80) jefe -> . JEFE TEXTO
+    (81) jefe -> . JEFE VACIO
+    (50) sub_dptos -> . SUBDEPARTAMENTOS APERT_BLOQUE lista_sub_dpto CIERRE_BLOQUE
+
+    JEFE            shift and go to state 127
+    SUBDEPARTAMENTOS shift and go to state 128
+
+    jefe                           shift and go to state 139
+    sub_dptos                      shift and go to state 140
+
+state 132
+
+    (44) objeto_dpto -> jefe COMA . sub_dptos COMA nombre
+    (45) objeto_dpto -> jefe COMA . nombre COMA sub_dptos
+    (50) sub_dptos -> . SUBDEPARTAMENTOS APERT_BLOQUE lista_sub_dpto CIERRE_BLOQUE
+    (79) nombre -> . NOMBRE TEXTO
+
+    SUBDEPARTAMENTOS shift and go to state 128
+    NOMBRE          shift and go to state 126
+
+    sub_dptos                      shift and go to state 141
+    nombre                         shift and go to state 142
+
+state 133
+
+    (46) objeto_dpto -> sub_dptos COMA . nombre COMA jefe
+    (47) objeto_dpto -> sub_dptos COMA . jefe COMA nombre
+    (49) objeto_dpto -> sub_dptos COMA . nombre
+    (79) nombre -> . NOMBRE TEXTO
+    (80) jefe -> . JEFE TEXTO
+    (81) jefe -> . JEFE VACIO
+
+    NOMBRE          shift and go to state 126
+    JEFE            shift and go to state 127
+
+    nombre                         shift and go to state 143
+    jefe                           shift and go to state 144
+
+state 134
+
+    (79) nombre -> NOMBRE TEXTO .
+
+    COMA            reduce using rule 79 (nombre -> NOMBRE TEXTO .)
+    CIERRE_LISTA    reduce using rule 79 (nombre -> NOMBRE TEXTO .)
+
+
+state 135
+
+    (80) jefe -> JEFE TEXTO .
+
+    COMA            reduce using rule 80 (jefe -> JEFE TEXTO .)
+    CIERRE_LISTA    reduce using rule 80 (jefe -> JEFE TEXTO .)
+
+
+state 136
+
+    (81) jefe -> JEFE VACIO .
+
+    COMA            reduce using rule 81 (jefe -> JEFE VACIO .)
+    CIERRE_LISTA    reduce using rule 81 (jefe -> JEFE VACIO .)
+
+
+state 137
+
+    (50) sub_dptos -> SUBDEPARTAMENTOS APERT_BLOQUE . lista_sub_dpto CIERRE_BLOQUE
+    (51) lista_sub_dpto -> . APERT_LISTA objeto_sub_dpto CIERRE_LISTA
+    (52) lista_sub_dpto -> . APERT_LISTA objeto_sub_dpto CIERRE_LISTA COMA lista_sub_dpto
+
+    APERT_LISTA     shift and go to state 146
+
+    lista_sub_dpto                 shift and go to state 145
+
+state 138
+
+    (41) lista_dpto -> APERT_LISTA objeto_dpto CIERRE_LISTA COMA . lista_dpto
+    (40) lista_dpto -> . APERT_LISTA objeto_dpto CIERRE_LISTA
+    (41) lista_dpto -> . APERT_LISTA objeto_dpto CIERRE_LISTA COMA lista_dpto
+
+    APERT_LISTA     shift and go to state 113
+
+    lista_dpto                     shift and go to state 147
+
+state 139
+
+    (42) objeto_dpto -> nombre COMA jefe . COMA sub_dptos
+
+    COMA            shift and go to state 148
+
+
+state 140
+
+    (43) objeto_dpto -> nombre COMA sub_dptos . COMA jefe
+    (48) objeto_dpto -> nombre COMA sub_dptos .
+
+    COMA            shift and go to state 149
+    CIERRE_LISTA    reduce using rule 48 (objeto_dpto -> nombre COMA sub_dptos .)
+
+
+state 141
+
+    (44) objeto_dpto -> jefe COMA sub_dptos . COMA nombre
+
+    COMA            shift and go to state 150
+
+
+state 142
+
+    (45) objeto_dpto -> jefe COMA nombre . COMA sub_dptos
+
+    COMA            shift and go to state 151
+
+
+state 143
+
+    (46) objeto_dpto -> sub_dptos COMA nombre . COMA jefe
+    (49) objeto_dpto -> sub_dptos COMA nombre .
+
+    COMA            shift and go to state 152
+    CIERRE_LISTA    reduce using rule 49 (objeto_dpto -> sub_dptos COMA nombre .)
+
+
+state 144
+
+    (47) objeto_dpto -> sub_dptos COMA jefe . COMA nombre
+
+    COMA            shift and go to state 153
+
+
+state 145
+
+    (50) sub_dptos -> SUBDEPARTAMENTOS APERT_BLOQUE lista_sub_dpto . CIERRE_BLOQUE
+
+    CIERRE_BLOQUE   shift and go to state 154
+
+
+state 146
+
+    (51) lista_sub_dpto -> APERT_LISTA . objeto_sub_dpto CIERRE_LISTA
+    (52) lista_sub_dpto -> APERT_LISTA . objeto_sub_dpto CIERRE_LISTA COMA lista_sub_dpto
+    (53) objeto_sub_dpto -> . nombre COMA jefe COMA empleados
+    (54) objeto_sub_dpto -> . nombre COMA jefe
+    (55) objeto_sub_dpto -> . nombre COMA empleados
+    (56) objeto_sub_dpto -> . nombre
+    (57) objeto_sub_dpto -> . jefe COMA nombre COMA empleados
+    (58) objeto_sub_dpto -> . jefe COMA empleados COMA nombre
+    (59) objeto_sub_dpto -> . empleados COMA jefe COMA nombre
+    (60) objeto_sub_dpto -> . empleados COMA nombre COMA jefe
+    (61) objeto_sub_dpto -> . jefe COMA nombre
+    (62) objeto_sub_dpto -> . empleados COMA nombre
+    (79) nombre -> . NOMBRE TEXTO
+    (80) jefe -> . JEFE TEXTO
+    (81) jefe -> . JEFE VACIO
+    (63) empleados -> . EMPLEADOS APERT_BLOQUE lista_empleados CIERRE_BLOQUE
+    (64) empleados -> . EMPLEADOS VACIO
+
+    NOMBRE          shift and go to state 126
+    JEFE            shift and go to state 127
+    EMPLEADOS       shift and go to state 159
+
+    objeto_sub_dpto                shift and go to state 155
+    nombre                         shift and go to state 156
+    jefe                           shift and go to state 157
+    empleados                      shift and go to state 158
+
+state 147
+
+    (41) lista_dpto -> APERT_LISTA objeto_dpto CIERRE_LISTA COMA lista_dpto .
+
+    CIERRE_BLOQUE   reduce using rule 41 (lista_dpto -> APERT_LISTA objeto_dpto CIERRE_LISTA COMA lista_dpto .)
+
+
+state 148
+
+    (42) objeto_dpto -> nombre COMA jefe COMA . sub_dptos
+    (50) sub_dptos -> . SUBDEPARTAMENTOS APERT_BLOQUE lista_sub_dpto CIERRE_BLOQUE
+
+    SUBDEPARTAMENTOS shift and go to state 128
+
+    sub_dptos                      shift and go to state 160
+
+state 149
+
+    (43) objeto_dpto -> nombre COMA sub_dptos COMA . jefe
+    (80) jefe -> . JEFE TEXTO
+    (81) jefe -> . JEFE VACIO
+
+    JEFE            shift and go to state 127
+
+    jefe                           shift and go to state 161
+
+state 150
+
+    (44) objeto_dpto -> jefe COMA sub_dptos COMA . nombre
+    (79) nombre -> . NOMBRE TEXTO
+
+    NOMBRE          shift and go to state 126
+
+    nombre                         shift and go to state 162
+
+state 151
+
+    (45) objeto_dpto -> jefe COMA nombre COMA . sub_dptos
+    (50) sub_dptos -> . SUBDEPARTAMENTOS APERT_BLOQUE lista_sub_dpto CIERRE_BLOQUE
+
+    SUBDEPARTAMENTOS shift and go to state 128
+
+    sub_dptos                      shift and go to state 163
+
+state 152
+
+    (46) objeto_dpto -> sub_dptos COMA nombre COMA . jefe
+    (80) jefe -> . JEFE TEXTO
+    (81) jefe -> . JEFE VACIO
+
+    JEFE            shift and go to state 127
+
+    jefe                           shift and go to state 164
+
+state 153
+
+    (47) objeto_dpto -> sub_dptos COMA jefe COMA . nombre
+    (79) nombre -> . NOMBRE TEXTO
+
+    NOMBRE          shift and go to state 126
+
+    nombre                         shift and go to state 165
+
+state 154
+
+    (50) sub_dptos -> SUBDEPARTAMENTOS APERT_BLOQUE lista_sub_dpto CIERRE_BLOQUE .
+
+    COMA            reduce using rule 50 (sub_dptos -> SUBDEPARTAMENTOS APERT_BLOQUE lista_sub_dpto CIERRE_BLOQUE .)
+    CIERRE_LISTA    reduce using rule 50 (sub_dptos -> SUBDEPARTAMENTOS APERT_BLOQUE lista_sub_dpto CIERRE_BLOQUE .)
+
+
+state 155
+
+    (51) lista_sub_dpto -> APERT_LISTA objeto_sub_dpto . CIERRE_LISTA
+    (52) lista_sub_dpto -> APERT_LISTA objeto_sub_dpto . CIERRE_LISTA COMA lista_sub_dpto
+
+    CIERRE_LISTA    shift and go to state 166
+
+
+state 156
+
+    (53) objeto_sub_dpto -> nombre . COMA jefe COMA empleados
+    (54) objeto_sub_dpto -> nombre . COMA jefe
+    (55) objeto_sub_dpto -> nombre . COMA empleados
+    (56) objeto_sub_dpto -> nombre .
+
+    COMA            shift and go to state 167
+    CIERRE_LISTA    reduce using rule 56 (objeto_sub_dpto -> nombre .)
+
+
+state 157
+
+    (57) objeto_sub_dpto -> jefe . COMA nombre COMA empleados
+    (58) objeto_sub_dpto -> jefe . COMA empleados COMA nombre
+    (61) objeto_sub_dpto -> jefe . COMA nombre
+
+    COMA            shift and go to state 168
+
+
+state 158
+
+    (59) objeto_sub_dpto -> empleados . COMA jefe COMA nombre
+    (60) objeto_sub_dpto -> empleados . COMA nombre COMA jefe
+    (62) objeto_sub_dpto -> empleados . COMA nombre
+
+    COMA            shift and go to state 169
+
+
+state 159
+
+    (63) empleados -> EMPLEADOS . APERT_BLOQUE lista_empleados CIERRE_BLOQUE
+    (64) empleados -> EMPLEADOS . VACIO
+
+    APERT_BLOQUE    shift and go to state 170
+    VACIO           shift and go to state 171
+
+
+state 160
+
+    (42) objeto_dpto -> nombre COMA jefe COMA sub_dptos .
+
+    CIERRE_LISTA    reduce using rule 42 (objeto_dpto -> nombre COMA jefe COMA sub_dptos .)
+
+
+state 161
+
+    (43) objeto_dpto -> nombre COMA sub_dptos COMA jefe .
+
+    CIERRE_LISTA    reduce using rule 43 (objeto_dpto -> nombre COMA sub_dptos COMA jefe .)
+
+
+state 162
+
+    (44) objeto_dpto -> jefe COMA sub_dptos COMA nombre .
+
+    CIERRE_LISTA    reduce using rule 44 (objeto_dpto -> jefe COMA sub_dptos COMA nombre .)
+
+
+state 163
+
+    (45) objeto_dpto -> jefe COMA nombre COMA sub_dptos .
+
+    CIERRE_LISTA    reduce using rule 45 (objeto_dpto -> jefe COMA nombre COMA sub_dptos .)
+
+
+state 164
+
+    (46) objeto_dpto -> sub_dptos COMA nombre COMA jefe .
+
+    CIERRE_LISTA    reduce using rule 46 (objeto_dpto -> sub_dptos COMA nombre COMA jefe .)
+
+
+state 165
+
+    (47) objeto_dpto -> sub_dptos COMA jefe COMA nombre .
+
+    CIERRE_LISTA    reduce using rule 47 (objeto_dpto -> sub_dptos COMA jefe COMA nombre .)
+
+
+state 166
+
+    (51) lista_sub_dpto -> APERT_LISTA objeto_sub_dpto CIERRE_LISTA .
+    (52) lista_sub_dpto -> APERT_LISTA objeto_sub_dpto CIERRE_LISTA . COMA lista_sub_dpto
+
+    CIERRE_BLOQUE   reduce using rule 51 (lista_sub_dpto -> APERT_LISTA objeto_sub_dpto CIERRE_LISTA .)
+    COMA            shift and go to state 172
+
+
+state 167
+
+    (53) objeto_sub_dpto -> nombre COMA . jefe COMA empleados
+    (54) objeto_sub_dpto -> nombre COMA . jefe
+    (55) objeto_sub_dpto -> nombre COMA . empleados
+    (80) jefe -> . JEFE TEXTO
+    (81) jefe -> . JEFE VACIO
+    (63) empleados -> . EMPLEADOS APERT_BLOQUE lista_empleados CIERRE_BLOQUE
+    (64) empleados -> . EMPLEADOS VACIO
+
+    JEFE            shift and go to state 127
+    EMPLEADOS       shift and go to state 159
+
+    jefe                           shift and go to state 173
+    empleados                      shift and go to state 174
+
+state 168
+
+    (57) objeto_sub_dpto -> jefe COMA . nombre COMA empleados
+    (58) objeto_sub_dpto -> jefe COMA . empleados COMA nombre
+    (61) objeto_sub_dpto -> jefe COMA . nombre
+    (79) nombre -> . NOMBRE TEXTO
+    (63) empleados -> . EMPLEADOS APERT_BLOQUE lista_empleados CIERRE_BLOQUE
+    (64) empleados -> . EMPLEADOS VACIO
+
+    NOMBRE          shift and go to state 126
+    EMPLEADOS       shift and go to state 159
+
+    nombre                         shift and go to state 175
+    empleados                      shift and go to state 176
+
+state 169
+
+    (59) objeto_sub_dpto -> empleados COMA . jefe COMA nombre
+    (60) objeto_sub_dpto -> empleados COMA . nombre COMA jefe
+    (62) objeto_sub_dpto -> empleados COMA . nombre
+    (80) jefe -> . JEFE TEXTO
+    (81) jefe -> . JEFE VACIO
+    (79) nombre -> . NOMBRE TEXTO
+
+    JEFE            shift and go to state 127
+    NOMBRE          shift and go to state 126
+
+    jefe                           shift and go to state 177
+    nombre                         shift and go to state 178
+
+state 170
+
+    (63) empleados -> EMPLEADOS APERT_BLOQUE . lista_empleados CIERRE_BLOQUE
+    (65) lista_empleados -> . APERT_LISTA objeto_empleados CIERRE_LISTA
+    (66) lista_empleados -> . APERT_LISTA objeto_empleados CIERRE_LISTA COMA lista_empleados
+
+    APERT_LISTA     shift and go to state 180
+
+    lista_empleados                shift and go to state 179
+
+state 171
+
+    (64) empleados -> EMPLEADOS VACIO .
+
+    COMA            reduce using rule 64 (empleados -> EMPLEADOS VACIO .)
+    CIERRE_LISTA    reduce using rule 64 (empleados -> EMPLEADOS VACIO .)
+
+
+state 172
+
+    (52) lista_sub_dpto -> APERT_LISTA objeto_sub_dpto CIERRE_LISTA COMA . lista_sub_dpto
+    (51) lista_sub_dpto -> . APERT_LISTA objeto_sub_dpto CIERRE_LISTA
+    (52) lista_sub_dpto -> . APERT_LISTA objeto_sub_dpto CIERRE_LISTA COMA lista_sub_dpto
+
+    APERT_LISTA     shift and go to state 146
+
+    lista_sub_dpto                 shift and go to state 181
+
+state 173
+
+    (53) objeto_sub_dpto -> nombre COMA jefe . COMA empleados
+    (54) objeto_sub_dpto -> nombre COMA jefe .
+
+    COMA            shift and go to state 182
+    CIERRE_LISTA    reduce using rule 54 (objeto_sub_dpto -> nombre COMA jefe .)
+
+
+state 174
+
+    (55) objeto_sub_dpto -> nombre COMA empleados .
+
+    CIERRE_LISTA    reduce using rule 55 (objeto_sub_dpto -> nombre COMA empleados .)
+
+
+state 175
+
+    (57) objeto_sub_dpto -> jefe COMA nombre . COMA empleados
+    (61) objeto_sub_dpto -> jefe COMA nombre .
+
+    COMA            shift and go to state 183
+    CIERRE_LISTA    reduce using rule 61 (objeto_sub_dpto -> jefe COMA nombre .)
+
+
+state 176
+
+    (58) objeto_sub_dpto -> jefe COMA empleados . COMA nombre
+
+    COMA            shift and go to state 184
+
+
+state 177
+
+    (59) objeto_sub_dpto -> empleados COMA jefe . COMA nombre
+
+    COMA            shift and go to state 185
+
+
+state 178
+
+    (60) objeto_sub_dpto -> empleados COMA nombre . COMA jefe
+    (62) objeto_sub_dpto -> empleados COMA nombre .
+
+    COMA            shift and go to state 186
+    CIERRE_LISTA    reduce using rule 62 (objeto_sub_dpto -> empleados COMA nombre .)
+
+
+state 179
+
+    (63) empleados -> EMPLEADOS APERT_BLOQUE lista_empleados . CIERRE_BLOQUE
+
+    CIERRE_BLOQUE   shift and go to state 187
+
+
+state 180
+
+    (65) lista_empleados -> APERT_LISTA . objeto_empleados CIERRE_LISTA
+    (66) lista_empleados -> APERT_LISTA . objeto_empleados CIERRE_LISTA COMA lista_empleados
+    (67) objeto_empleados -> . nombre COMA edad COMA cargo COMA salario COMA activo COMA fecha_contratacion COMA proyectos
+    (68) objeto_empleados -> . nombre COMA edad COMA cargo COMA salario COMA activo COMA fecha_contratacion
+    (69) objeto_empleados -> . nombre COMA cargo COMA salario COMA activo COMA fecha_contratacion COMA proyectos
+    (70) objeto_empleados -> . nombre COMA cargo COMA salario COMA activo COMA fecha_contratacion
+    (79) nombre -> . NOMBRE TEXTO
+
+    NOMBRE          shift and go to state 126
+
+    objeto_empleados               shift and go to state 188
+    nombre                         shift and go to state 189
+
+state 181
+
+    (52) lista_sub_dpto -> APERT_LISTA objeto_sub_dpto CIERRE_LISTA COMA lista_sub_dpto .
+
+    CIERRE_BLOQUE   reduce using rule 52 (lista_sub_dpto -> APERT_LISTA objeto_sub_dpto CIERRE_LISTA COMA lista_sub_dpto .)
+
+
+state 182
+
+    (53) objeto_sub_dpto -> nombre COMA jefe COMA . empleados
+    (63) empleados -> . EMPLEADOS APERT_BLOQUE lista_empleados CIERRE_BLOQUE
+    (64) empleados -> . EMPLEADOS VACIO
+
+    EMPLEADOS       shift and go to state 159
+
+    empleados                      shift and go to state 190
+
+state 183
+
+    (57) objeto_sub_dpto -> jefe COMA nombre COMA . empleados
+    (63) empleados -> . EMPLEADOS APERT_BLOQUE lista_empleados CIERRE_BLOQUE
+    (64) empleados -> . EMPLEADOS VACIO
+
+    EMPLEADOS       shift and go to state 159
+
+    empleados                      shift and go to state 191
+
+state 184
+
+    (58) objeto_sub_dpto -> jefe COMA empleados COMA . nombre
+    (79) nombre -> . NOMBRE TEXTO
+
+    NOMBRE          shift and go to state 126
+
+    nombre                         shift and go to state 192
+
+state 185
+
+    (59) objeto_sub_dpto -> empleados COMA jefe COMA . nombre
+    (79) nombre -> . NOMBRE TEXTO
+
+    NOMBRE          shift and go to state 126
+
+    nombre                         shift and go to state 193
+
+state 186
+
+    (60) objeto_sub_dpto -> empleados COMA nombre COMA . jefe
+    (80) jefe -> . JEFE TEXTO
+    (81) jefe -> . JEFE VACIO
+
+    JEFE            shift and go to state 127
+
+    jefe                           shift and go to state 194
+
+state 187
+
+    (63) empleados -> EMPLEADOS APERT_BLOQUE lista_empleados CIERRE_BLOQUE .
+
+    COMA            reduce using rule 63 (empleados -> EMPLEADOS APERT_BLOQUE lista_empleados CIERRE_BLOQUE .)
+    CIERRE_LISTA    reduce using rule 63 (empleados -> EMPLEADOS APERT_BLOQUE lista_empleados CIERRE_BLOQUE .)
+
+
+state 188
+
+    (65) lista_empleados -> APERT_LISTA objeto_empleados . CIERRE_LISTA
+    (66) lista_empleados -> APERT_LISTA objeto_empleados . CIERRE_LISTA COMA lista_empleados
+
+    CIERRE_LISTA    shift and go to state 195
+
+
+state 189
+
+    (67) objeto_empleados -> nombre . COMA edad COMA cargo COMA salario COMA activo COMA fecha_contratacion COMA proyectos
+    (68) objeto_empleados -> nombre . COMA edad COMA cargo COMA salario COMA activo COMA fecha_contratacion
+    (69) objeto_empleados -> nombre . COMA cargo COMA salario COMA activo COMA fecha_contratacion COMA proyectos
+    (70) objeto_empleados -> nombre . COMA cargo COMA salario COMA activo COMA fecha_contratacion
+
+    COMA            shift and go to state 196
+
+
+state 190
+
+    (53) objeto_sub_dpto -> nombre COMA jefe COMA empleados .
+
+    CIERRE_LISTA    reduce using rule 53 (objeto_sub_dpto -> nombre COMA jefe COMA empleados .)
+
+
+state 191
+
+    (57) objeto_sub_dpto -> jefe COMA nombre COMA empleados .
+
+    CIERRE_LISTA    reduce using rule 57 (objeto_sub_dpto -> jefe COMA nombre COMA empleados .)
+
+
+state 192
+
+    (58) objeto_sub_dpto -> jefe COMA empleados COMA nombre .
+
+    CIERRE_LISTA    reduce using rule 58 (objeto_sub_dpto -> jefe COMA empleados COMA nombre .)
+
+
+state 193
+
+    (59) objeto_sub_dpto -> empleados COMA jefe COMA nombre .
+
+    CIERRE_LISTA    reduce using rule 59 (objeto_sub_dpto -> empleados COMA jefe COMA nombre .)
+
+
+state 194
+
+    (60) objeto_sub_dpto -> empleados COMA nombre COMA jefe .
+
+    CIERRE_LISTA    reduce using rule 60 (objeto_sub_dpto -> empleados COMA nombre COMA jefe .)
+
+
+state 195
+
+    (65) lista_empleados -> APERT_LISTA objeto_empleados CIERRE_LISTA .
+    (66) lista_empleados -> APERT_LISTA objeto_empleados CIERRE_LISTA . COMA lista_empleados
+
+    CIERRE_BLOQUE   reduce using rule 65 (lista_empleados -> APERT_LISTA objeto_empleados CIERRE_LISTA .)
+    COMA            shift and go to state 197
+
+
+state 196
+
+    (67) objeto_empleados -> nombre COMA . edad COMA cargo COMA salario COMA activo COMA fecha_contratacion COMA proyectos
+    (68) objeto_empleados -> nombre COMA . edad COMA cargo COMA salario COMA activo COMA fecha_contratacion
+    (69) objeto_empleados -> nombre COMA . cargo COMA salario COMA activo COMA fecha_contratacion COMA proyectos
+    (70) objeto_empleados -> nombre COMA . cargo COMA salario COMA activo COMA fecha_contratacion
+    (82) edad -> . EDAD NUMERO
+    (83) edad -> . EDAD VACIO
+    (84) cargo -> . CARGO TEXTO_RESTRINGIDO_CARGO
+
+    EDAD            shift and go to state 200
+    CARGO           shift and go to state 201
+
+    edad                           shift and go to state 198
+    cargo                          shift and go to state 199
+
+state 197
+
+    (66) lista_empleados -> APERT_LISTA objeto_empleados CIERRE_LISTA COMA . lista_empleados
+    (65) lista_empleados -> . APERT_LISTA objeto_empleados CIERRE_LISTA
+    (66) lista_empleados -> . APERT_LISTA objeto_empleados CIERRE_LISTA COMA lista_empleados
+
+    APERT_LISTA     shift and go to state 180
+
+    lista_empleados                shift and go to state 202
+
+state 198
+
+    (67) objeto_empleados -> nombre COMA edad . COMA cargo COMA salario COMA activo COMA fecha_contratacion COMA proyectos
+    (68) objeto_empleados -> nombre COMA edad . COMA cargo COMA salario COMA activo COMA fecha_contratacion
+
+    COMA            shift and go to state 203
+
+
+state 199
+
+    (69) objeto_empleados -> nombre COMA cargo . COMA salario COMA activo COMA fecha_contratacion COMA proyectos
+    (70) objeto_empleados -> nombre COMA cargo . COMA salario COMA activo COMA fecha_contratacion
+
+    COMA            shift and go to state 204
+
+
+state 200
+
+    (82) edad -> EDAD . NUMERO
+    (83) edad -> EDAD . VACIO
+
+    NUMERO          shift and go to state 205
+    VACIO           shift and go to state 206
+
+
+state 201
+
+    (84) cargo -> CARGO . TEXTO_RESTRINGIDO_CARGO
+
+    TEXTO_RESTRINGIDO_CARGO shift and go to state 207
+
+
+state 202
+
+    (66) lista_empleados -> APERT_LISTA objeto_empleados CIERRE_LISTA COMA lista_empleados .
+
+    CIERRE_BLOQUE   reduce using rule 66 (lista_empleados -> APERT_LISTA objeto_empleados CIERRE_LISTA COMA lista_empleados .)
+
+
+state 203
+
+    (67) objeto_empleados -> nombre COMA edad COMA . cargo COMA salario COMA activo COMA fecha_contratacion COMA proyectos
+    (68) objeto_empleados -> nombre COMA edad COMA . cargo COMA salario COMA activo COMA fecha_contratacion
+    (84) cargo -> . CARGO TEXTO_RESTRINGIDO_CARGO
+
+    CARGO           shift and go to state 201
+
+    cargo                          shift and go to state 208
+
+state 204
+
+    (69) objeto_empleados -> nombre COMA cargo COMA . salario COMA activo COMA fecha_contratacion COMA proyectos
+    (70) objeto_empleados -> nombre COMA cargo COMA . salario COMA activo COMA fecha_contratacion
+    (85) salario -> . SALARIO FLOTANTE
+
+    SALARIO         shift and go to state 210
+
+    salario                        shift and go to state 209
+
+state 205
+
+    (82) edad -> EDAD NUMERO .
+
+    COMA            reduce using rule 82 (edad -> EDAD NUMERO .)
+
+
+state 206
+
+    (83) edad -> EDAD VACIO .
+
+    COMA            reduce using rule 83 (edad -> EDAD VACIO .)
+
+
+state 207
+
+    (84) cargo -> CARGO TEXTO_RESTRINGIDO_CARGO .
+
+    COMA            reduce using rule 84 (cargo -> CARGO TEXTO_RESTRINGIDO_CARGO .)
+
+
+state 208
+
+    (67) objeto_empleados -> nombre COMA edad COMA cargo . COMA salario COMA activo COMA fecha_contratacion COMA proyectos
+    (68) objeto_empleados -> nombre COMA edad COMA cargo . COMA salario COMA activo COMA fecha_contratacion
+
+    COMA            shift and go to state 211
+
+
+state 209
+
+    (69) objeto_empleados -> nombre COMA cargo COMA salario . COMA activo COMA fecha_contratacion COMA proyectos
+    (70) objeto_empleados -> nombre COMA cargo COMA salario . COMA activo COMA fecha_contratacion
+
+    COMA            shift and go to state 212
+
+
+state 210
+
+    (85) salario -> SALARIO . FLOTANTE
+
+    FLOTANTE        shift and go to state 213
+
+
+state 211
+
+    (67) objeto_empleados -> nombre COMA edad COMA cargo COMA . salario COMA activo COMA fecha_contratacion COMA proyectos
+    (68) objeto_empleados -> nombre COMA edad COMA cargo COMA . salario COMA activo COMA fecha_contratacion
+    (85) salario -> . SALARIO FLOTANTE
+
+    SALARIO         shift and go to state 210
+
+    salario                        shift and go to state 214
+
+state 212
+
+    (69) objeto_empleados -> nombre COMA cargo COMA salario COMA . activo COMA fecha_contratacion COMA proyectos
+    (70) objeto_empleados -> nombre COMA cargo COMA salario COMA . activo COMA fecha_contratacion
+    (86) activo -> . ACTIVO BOOLEANO
+
+    ACTIVO          shift and go to state 216
+
+    activo                         shift and go to state 215
+
+state 213
+
+    (85) salario -> SALARIO FLOTANTE .
+
+    COMA            reduce using rule 85 (salario -> SALARIO FLOTANTE .)
+
+
+state 214
+
+    (67) objeto_empleados -> nombre COMA edad COMA cargo COMA salario . COMA activo COMA fecha_contratacion COMA proyectos
+    (68) objeto_empleados -> nombre COMA edad COMA cargo COMA salario . COMA activo COMA fecha_contratacion
+
+    COMA            shift and go to state 217
+
+
+state 215
+
+    (69) objeto_empleados -> nombre COMA cargo COMA salario COMA activo . COMA fecha_contratacion COMA proyectos
+    (70) objeto_empleados -> nombre COMA cargo COMA salario COMA activo . COMA fecha_contratacion
+
+    COMA            shift and go to state 218
+
+
+state 216
+
+    (86) activo -> ACTIVO . BOOLEANO
+
+    BOOLEANO        shift and go to state 219
+
+
+state 217
+
+    (67) objeto_empleados -> nombre COMA edad COMA cargo COMA salario COMA . activo COMA fecha_contratacion COMA proyectos
+    (68) objeto_empleados -> nombre COMA edad COMA cargo COMA salario COMA . activo COMA fecha_contratacion
+    (86) activo -> . ACTIVO BOOLEANO
+
+    ACTIVO          shift and go to state 216
+
+    activo                         shift and go to state 220
+
+state 218
+
+    (69) objeto_empleados -> nombre COMA cargo COMA salario COMA activo COMA . fecha_contratacion COMA proyectos
+    (70) objeto_empleados -> nombre COMA cargo COMA salario COMA activo COMA . fecha_contratacion
+    (87) fecha_contratacion -> . FECHA_CONTRATACION FECHA
+
+    FECHA_CONTRATACION shift and go to state 222
+
+    fecha_contratacion             shift and go to state 221
+
+state 219
+
+    (86) activo -> ACTIVO BOOLEANO .
+
+    COMA            reduce using rule 86 (activo -> ACTIVO BOOLEANO .)
+
+
+state 220
+
+    (67) objeto_empleados -> nombre COMA edad COMA cargo COMA salario COMA activo . COMA fecha_contratacion COMA proyectos
+    (68) objeto_empleados -> nombre COMA edad COMA cargo COMA salario COMA activo . COMA fecha_contratacion
+
+    COMA            shift and go to state 223
+
+
+state 221
+
+    (69) objeto_empleados -> nombre COMA cargo COMA salario COMA activo COMA fecha_contratacion . COMA proyectos
+    (70) objeto_empleados -> nombre COMA cargo COMA salario COMA activo COMA fecha_contratacion .
+
+    COMA            shift and go to state 224
+    CIERRE_LISTA    reduce using rule 70 (objeto_empleados -> nombre COMA cargo COMA salario COMA activo COMA fecha_contratacion .)
+
+
+state 222
+
+    (87) fecha_contratacion -> FECHA_CONTRATACION . FECHA
+
+    FECHA           shift and go to state 225
+
+
+state 223
+
+    (67) objeto_empleados -> nombre COMA edad COMA cargo COMA salario COMA activo COMA . fecha_contratacion COMA proyectos
+    (68) objeto_empleados -> nombre COMA edad COMA cargo COMA salario COMA activo COMA . fecha_contratacion
+    (87) fecha_contratacion -> . FECHA_CONTRATACION FECHA
+
+    FECHA_CONTRATACION shift and go to state 222
+
+    fecha_contratacion             shift and go to state 226
+
+state 224
+
+    (69) objeto_empleados -> nombre COMA cargo COMA salario COMA activo COMA fecha_contratacion COMA . proyectos
+    (71) proyectos -> . PROYECTOS APERT_BLOQUE lista_proyectos CIERRE_BLOQUE
+    (72) proyectos -> . PROYECTOS VACIO
+
+    PROYECTOS       shift and go to state 228
+
+    proyectos                      shift and go to state 227
+
+state 225
+
+    (87) fecha_contratacion -> FECHA_CONTRATACION FECHA .
+
+    COMA            reduce using rule 87 (fecha_contratacion -> FECHA_CONTRATACION FECHA .)
+    CIERRE_LISTA    reduce using rule 87 (fecha_contratacion -> FECHA_CONTRATACION FECHA .)
+
+
+state 226
+
+    (67) objeto_empleados -> nombre COMA edad COMA cargo COMA salario COMA activo COMA fecha_contratacion . COMA proyectos
+    (68) objeto_empleados -> nombre COMA edad COMA cargo COMA salario COMA activo COMA fecha_contratacion .
+
+    COMA            shift and go to state 229
+    CIERRE_LISTA    reduce using rule 68 (objeto_empleados -> nombre COMA edad COMA cargo COMA salario COMA activo COMA fecha_contratacion .)
+
+
+state 227
+
+    (69) objeto_empleados -> nombre COMA cargo COMA salario COMA activo COMA fecha_contratacion COMA proyectos .
+
+    CIERRE_LISTA    reduce using rule 69 (objeto_empleados -> nombre COMA cargo COMA salario COMA activo COMA fecha_contratacion COMA proyectos .)
+
+
+state 228
+
+    (71) proyectos -> PROYECTOS . APERT_BLOQUE lista_proyectos CIERRE_BLOQUE
+    (72) proyectos -> PROYECTOS . VACIO
+
+    APERT_BLOQUE    shift and go to state 230
+    VACIO           shift and go to state 231
+
+
+state 229
+
+    (67) objeto_empleados -> nombre COMA edad COMA cargo COMA salario COMA activo COMA fecha_contratacion COMA . proyectos
+    (71) proyectos -> . PROYECTOS APERT_BLOQUE lista_proyectos CIERRE_BLOQUE
+    (72) proyectos -> . PROYECTOS VACIO
+
+    PROYECTOS       shift and go to state 228
+
+    proyectos                      shift and go to state 232
+
+state 230
+
+    (71) proyectos -> PROYECTOS APERT_BLOQUE . lista_proyectos CIERRE_BLOQUE
+    (73) lista_proyectos -> . APERT_LISTA objeto_proyecto CIERRE_LISTA
+    (74) lista_proyectos -> . APERT_LISTA objeto_proyecto CIERRE_LISTA COMA lista_proyectos
+
+    APERT_LISTA     shift and go to state 234
+
+    lista_proyectos                shift and go to state 233
+
+state 231
+
+    (72) proyectos -> PROYECTOS VACIO .
+
+    CIERRE_LISTA    reduce using rule 72 (proyectos -> PROYECTOS VACIO .)
+
+
+state 232
+
+    (67) objeto_empleados -> nombre COMA edad COMA cargo COMA salario COMA activo COMA fecha_contratacion COMA proyectos .
+
+    CIERRE_LISTA    reduce using rule 67 (objeto_empleados -> nombre COMA edad COMA cargo COMA salario COMA activo COMA fecha_contratacion COMA proyectos .)
+
+
+state 233
+
+    (71) proyectos -> PROYECTOS APERT_BLOQUE lista_proyectos . CIERRE_BLOQUE
+
+    CIERRE_BLOQUE   shift and go to state 235
+
+
+state 234
+
+    (73) lista_proyectos -> APERT_LISTA . objeto_proyecto CIERRE_LISTA
+    (74) lista_proyectos -> APERT_LISTA . objeto_proyecto CIERRE_LISTA COMA lista_proyectos
+    (75) objeto_proyecto -> . nombre COMA estado COMA fecha_inicio COMA fecha_fin
+    (76) objeto_proyecto -> . nombre COMA fecha_inicio COMA fecha_fin
+    (77) objeto_proyecto -> . nombre COMA estado COMA fecha_inicio
+    (78) objeto_proyecto -> . nombre COMA fecha_inicio
+    (79) nombre -> . NOMBRE TEXTO
+
+    NOMBRE          shift and go to state 126
+
+    objeto_proyecto                shift and go to state 236
+    nombre                         shift and go to state 237
+
+state 235
+
+    (71) proyectos -> PROYECTOS APERT_BLOQUE lista_proyectos CIERRE_BLOQUE .
+
+    CIERRE_LISTA    reduce using rule 71 (proyectos -> PROYECTOS APERT_BLOQUE lista_proyectos CIERRE_BLOQUE .)
+
+
+state 236
+
+    (73) lista_proyectos -> APERT_LISTA objeto_proyecto . CIERRE_LISTA
+    (74) lista_proyectos -> APERT_LISTA objeto_proyecto . CIERRE_LISTA COMA lista_proyectos
+
+    CIERRE_LISTA    shift and go to state 238
+
+
+state 237
+
+    (75) objeto_proyecto -> nombre . COMA estado COMA fecha_inicio COMA fecha_fin
+    (76) objeto_proyecto -> nombre . COMA fecha_inicio COMA fecha_fin
+    (77) objeto_proyecto -> nombre . COMA estado COMA fecha_inicio
+    (78) objeto_proyecto -> nombre . COMA fecha_inicio
+
+    COMA            shift and go to state 239
+
+
+state 238
+
+    (73) lista_proyectos -> APERT_LISTA objeto_proyecto CIERRE_LISTA .
+    (74) lista_proyectos -> APERT_LISTA objeto_proyecto CIERRE_LISTA . COMA lista_proyectos
+
+    CIERRE_BLOQUE   reduce using rule 73 (lista_proyectos -> APERT_LISTA objeto_proyecto CIERRE_LISTA .)
+    COMA            shift and go to state 240
+
+
+state 239
+
+    (75) objeto_proyecto -> nombre COMA . estado COMA fecha_inicio COMA fecha_fin
+    (76) objeto_proyecto -> nombre COMA . fecha_inicio COMA fecha_fin
+    (77) objeto_proyecto -> nombre COMA . estado COMA fecha_inicio
+    (78) objeto_proyecto -> nombre COMA . fecha_inicio
+    (88) estado -> . ESTADO TEXTO_RESTRINGIDO_ESTADO
+    (89) estado -> . ESTADO VACIO
+    (90) fecha_inicio -> . FECHA_INICIO FECHA
+
+    ESTADO          shift and go to state 243
+    FECHA_INICIO    shift and go to state 244
+
+    estado                         shift and go to state 241
+    fecha_inicio                   shift and go to state 242
+
+state 240
+
+    (74) lista_proyectos -> APERT_LISTA objeto_proyecto CIERRE_LISTA COMA . lista_proyectos
+    (73) lista_proyectos -> . APERT_LISTA objeto_proyecto CIERRE_LISTA
+    (74) lista_proyectos -> . APERT_LISTA objeto_proyecto CIERRE_LISTA COMA lista_proyectos
+
+    APERT_LISTA     shift and go to state 234
+
+    lista_proyectos                shift and go to state 245
+
+state 241
+
+    (75) objeto_proyecto -> nombre COMA estado . COMA fecha_inicio COMA fecha_fin
+    (77) objeto_proyecto -> nombre COMA estado . COMA fecha_inicio
+
+    COMA            shift and go to state 246
+
+
+state 242
+
+    (76) objeto_proyecto -> nombre COMA fecha_inicio . COMA fecha_fin
+    (78) objeto_proyecto -> nombre COMA fecha_inicio .
+
+    COMA            shift and go to state 247
+    CIERRE_LISTA    reduce using rule 78 (objeto_proyecto -> nombre COMA fecha_inicio .)
+
+
+state 243
+
+    (88) estado -> ESTADO . TEXTO_RESTRINGIDO_ESTADO
+    (89) estado -> ESTADO . VACIO
+
+    TEXTO_RESTRINGIDO_ESTADO shift and go to state 248
+    VACIO           shift and go to state 249
+
+
+state 244
+
+    (90) fecha_inicio -> FECHA_INICIO . FECHA
+
+    FECHA           shift and go to state 250
+
+
+state 245
+
+    (74) lista_proyectos -> APERT_LISTA objeto_proyecto CIERRE_LISTA COMA lista_proyectos .
+
+    CIERRE_BLOQUE   reduce using rule 74 (lista_proyectos -> APERT_LISTA objeto_proyecto CIERRE_LISTA COMA lista_proyectos .)
+
+
+state 246
+
+    (75) objeto_proyecto -> nombre COMA estado COMA . fecha_inicio COMA fecha_fin
+    (77) objeto_proyecto -> nombre COMA estado COMA . fecha_inicio
+    (90) fecha_inicio -> . FECHA_INICIO FECHA
+
+    FECHA_INICIO    shift and go to state 244
+
+    fecha_inicio                   shift and go to state 251
+
+state 247
+
+    (76) objeto_proyecto -> nombre COMA fecha_inicio COMA . fecha_fin
+    (91) fecha_fin -> . FECHA_FIN FECHA
+    (92) fecha_fin -> . FECHA_FIN VACIO
+
+    FECHA_FIN       shift and go to state 253
+
+    fecha_fin                      shift and go to state 252
+
+state 248
+
+    (88) estado -> ESTADO TEXTO_RESTRINGIDO_ESTADO .
+
+    COMA            reduce using rule 88 (estado -> ESTADO TEXTO_RESTRINGIDO_ESTADO .)
+
+
+state 249
+
+    (89) estado -> ESTADO VACIO .
+
+    COMA            reduce using rule 89 (estado -> ESTADO VACIO .)
+
+
+state 250
+
+    (90) fecha_inicio -> FECHA_INICIO FECHA .
+
+    COMA            reduce using rule 90 (fecha_inicio -> FECHA_INICIO FECHA .)
+    CIERRE_LISTA    reduce using rule 90 (fecha_inicio -> FECHA_INICIO FECHA .)
+
+
+state 251
+
+    (75) objeto_proyecto -> nombre COMA estado COMA fecha_inicio . COMA fecha_fin
+    (77) objeto_proyecto -> nombre COMA estado COMA fecha_inicio .
+
+    COMA            shift and go to state 254
+    CIERRE_LISTA    reduce using rule 77 (objeto_proyecto -> nombre COMA estado COMA fecha_inicio .)
+
+
+state 252
+
+    (76) objeto_proyecto -> nombre COMA fecha_inicio COMA fecha_fin .
+
+    CIERRE_LISTA    reduce using rule 76 (objeto_proyecto -> nombre COMA fecha_inicio COMA fecha_fin .)
+
+
+state 253
+
+    (91) fecha_fin -> FECHA_FIN . FECHA
+    (92) fecha_fin -> FECHA_FIN . VACIO
+
+    FECHA           shift and go to state 255
+    VACIO           shift and go to state 256
+
+
+state 254
+
+    (75) objeto_proyecto -> nombre COMA estado COMA fecha_inicio COMA . fecha_fin
+    (91) fecha_fin -> . FECHA_FIN FECHA
+    (92) fecha_fin -> . FECHA_FIN VACIO
+
+    FECHA_FIN       shift and go to state 253
+
+    fecha_fin                      shift and go to state 257
+
+state 255
+
+    (91) fecha_fin -> FECHA_FIN FECHA .
+
+    CIERRE_LISTA    reduce using rule 91 (fecha_fin -> FECHA_FIN FECHA .)
+
+
+state 256
+
+    (92) fecha_fin -> FECHA_FIN VACIO .
+
+    CIERRE_LISTA    reduce using rule 92 (fecha_fin -> FECHA_FIN VACIO .)
+
+
+state 257
+
+    (75) objeto_proyecto -> nombre COMA estado COMA fecha_inicio COMA fecha_fin .
+
+    CIERRE_LISTA    reduce using rule 75 (objeto_proyecto -> nombre COMA estado COMA fecha_inicio COMA fecha_fin .)
+
